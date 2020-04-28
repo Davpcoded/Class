@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York Times Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c1cc17a88c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+          <h1 class="display-4 jumboH1" ><i class="far fa-newspaper"></i> New York Times Search</h1>
+      </div>
+            <div class="row">
+                <div class="card"> 
+                    <h5 class="card-header">Featured</h5>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                <label for="exampleInputEmail1">Search Term:</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Number of Records to Retrieve:</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>1</option>
+                                        <option>5</option>
+                                        <option>10</option>
+                                        </select>
+                                    </div>
+                                <div class="form-group">
+                                        <label for="exampleInputEmail1">End Year(Optional):</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">End Year(Optional):</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                <button type="submit" class="btn btn-primary" id="search"><i class="fas fa-search"></i> Search</button>
+                                <button type="submit" class="btn btn-primary" id="clear"><i class="far fa-trash-alt"></i> Clear</button>
+                            </form>
+                        </div>
+                </div>
+          </div>
+          <div class="row">
+            <div class="card">
+                <h2 id="headline"></h2>
+                <p id="abstract"></p>
+                <a src=# id="articleLink"></a>
+                <p id="pubDate"></p>
+              </div>
+          </div>
+    </div>
+    <script>
+        function checkSearchTerms() {
+if (startYear == "" || endYear == "") {
+queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+searchTerm + "&api-key=Hf5mJwbOleVeJXvODmDK2WtSyI5Lkgq1"
+    } else {
+queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+searchTerm + "&begin_date=" + startYear + "&end_date=" + endYear + "&api-key=Hf5mJwbOleVeJXvODmDK2WtSyI5Lkgq1"
+    }
+}
+    </script>
+</body>
+</html>
+<!-- new messages
+
+Grant Smith  1:38 PM
+function checkSearchTerms() {
+if (startYear == "" || endYear == "") {
+queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+searchTerm + "&api-key=Hf5mJwbOleVeJXvODmDK2WtSyI5Lkgq1"
+} else {
+queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+searchTerm + "&begin_date=" + startYear + "&end_date=" + endYear + "&api-key=Hf5mJwbOleVeJXvODmDK2WtSyI5Lkgq1"
+}
+} -->

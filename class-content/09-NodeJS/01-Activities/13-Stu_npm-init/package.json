@@ -1,0 +1,11 @@
+{
+  "name": "package1",
+  "version": "1.0.1",
+  "description": "my first package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Villarroel",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "miniproject",
+  "version": "1.0.1",
+  "description": "activity to learn to create a tool that generates templated html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mini",
+    "project"
+  ],
+  "author": "daniel villarroel",
+  "license": "ISC"
+}
